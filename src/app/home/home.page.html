@@ -1,0 +1,30 @@
+<ion-content>
+  <h3> Bora Bill - Encontre sua cara metade </h3>
+   <h3>Coloque seu Nome e vamos ver quantos % , o seu amor é seu !!</h3>
+  
+  <ion-item class="ion-no-padding">
+    <ion-label position="floating">Insira seu Nome(a)</ion-label>
+    <ion-input [(ngModel)]="nome1" type="text"></ion-input>
+  </ion-item>
+
+  <div class="icone"><ion-icon name="heart"></ion-icon></div>
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="floating">Insira o nome do seu amor(a)</ion-label>
+    <ion-input [(ngModel)]="nome2" type="text"></ion-input>
+  </ion-item>
+
+  <div class="titleSub">
+    <h1 class="title"> Utilize as melhores cantadas</h1>
+    <p>Pronto, estou aqui! Quais são os seus outros dois desejos?</p>
+  <p>Tem alguma coisa errada com o meu celular. Não consigo encontrar o seu número nele...</p>
+    <p>As rosas são vermelhas, violetas são azuis, eu não sei rimar, mas posso namorar você?</p>
+    </div>
+     <ion-button (click)="calcular()" id="open-resposta" expand="full" color="secondary">Calcular</ion-button>
+
+  <ion-modal id="resposta" #modal trigger="open-resposta">
+    <ng-template>
+      <h1>{{porcentagem}}% esta esperando oque,bora conquistar o seu amor.. </h1> 
+    </ng-template>
+  </ion-modal>
+</ion-content>
